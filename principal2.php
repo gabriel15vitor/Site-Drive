@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <html>
 <head>
 	<html lang="pt-br">

@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <html>
 <head>
 	<?php
@@ -7,6 +8,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="login.css">
 	<link rel="stylesheet" type="text/css" href="css.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$(".btn").click(function() {
@@ -49,11 +51,9 @@
 		case 1:
 			echo "<center><div id='alerta' class='alert alert-danger'><strong>Falha! </strong>Preencha todos os campos corretamente</div></center>";
 			break;
-		
 		case 2:
 			echo "<center><div id='alerta' class='alert alert-danger'><strong>Falha! </strong>Usuário ou senha incorretos</div></center>";
 			break;
-
 		case 3:
 			echo "<center><div id='alerta' class='alert alert-danger'><strong>Falha! </strong>Esse login já existe</div></center>";
 			break;
@@ -71,19 +71,16 @@
 		<form class="form-signin" action="scripts/verifica.php" method="post" name="form">
 			<label for="username">Usuário</label>
 			<input class="form-styling" type="text" name="usuario" placeholder=""/>
-
 			<label for="password">Senha</label>
-			<input class="form-styling" type="text" name="senha" placeholder=""/>
+			<input class="form-styling" type="password" name="senha" placeholder=""/>
 			<br><br>
 			<button class="btn-signin" type="submit">Entrar</button>
 		</form>
-        
 		<form class="form-signup" action="scripts/cadastra.php" method="post" name="form">
           <label for="fullname">Usuário</label>
           <input class="form-styling" type="text" name="usuario" placeholder=""/>
-
           <label for="password">Senha</label>
-          <input class="form-styling" type="text" name="senha" placeholder=""/>
+          <input class="form-styling" type="password" name="senha" placeholder=""/>
           <br><br>
           <button type="submit" class="btn-signin">Cadastrar-se</button>
 		</form>
